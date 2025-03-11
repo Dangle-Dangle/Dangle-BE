@@ -8,7 +8,7 @@ import { MdAlternateEmail } from "react-icons/md";
 import axios from "axios";
 
 interface AccountVO {
-    userId?: string | number;
+    userId: string | number;
     userPw: string;
     userName: string;
     userBirth: string;
@@ -125,7 +125,7 @@ const JoinForm: React.FC = () => {
         };
 
         try {
-            const response = await axios.post("/joinForm", formattedAccountVO);
+            const response = await axios.post("/auth/joinForm", formattedAccountVO);
 
             if (response.data) {
                 console.log("회원가입 성공:", response.data);

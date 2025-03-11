@@ -5,6 +5,7 @@
 
 <mapper namespace="com.project.dangle.account.AccountMapper">
 
+    <!-- 회원가입 -->
     <insert id="joinForm" parameterType="AccountVO">
         INSERT INTO users (
                             USER_ID,
@@ -32,4 +33,11 @@
                   #{userProfileUrl}
                          )
     </insert>
+
+    <!-- 아이디로 회원 조회 (로그인용) -->
+    <select id="findByUserId" resultType="com.project.dangle.command.AccountVO">
+        SELECT *
+        FROM account
+        WHERE user_id = #{userId}
+    </select>
 </mapper>

@@ -21,7 +21,7 @@ import ReservationForm from "./screens/reservation/ReservationForm";
 import Profile from "./screens/account/Profile";
 
 const App: React.FC = () => {
-    const [isLogin, setIsLogin] = useState<boolean>(true);
+    // const [isLogin, setIsLogin] = useState<boolean>(true);
     return (
         <div className="App">
             <Header />
@@ -38,7 +38,7 @@ const App: React.FC = () => {
                 <Route path="/reservationDetail" element={<ReservationDetail />} />
                 <Route path="/reservationForm" element={<ReservationForm />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/profile" element={<Profile isLogin={isLogin} setIsLogin={setIsLogin} />} />
+                <Route path="/profile" element={<Profile />} />
                 <Route path="/joinAgree" element={<JoinAgree />} />
                 <Route path="/joinForm" element={<JoinForm />} />
                 <Route path="/joinComplete" element={<JoinComplete />} />
